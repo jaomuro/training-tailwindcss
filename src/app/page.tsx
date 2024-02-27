@@ -4,6 +4,7 @@ import * as Input from '../components/Sidebar/Input'
 import { Mail} from 'lucide-react';
 import * as FileInput from '../components/FileInput'
 import { SelectInput } from '../components/SelectInput.tsx'
+import { Item } from '@/components/SelectInput.tsx/item';
 
 export default function Home() {
   return (
@@ -91,13 +92,22 @@ export default function Home() {
           <div className='grid gap-3 grid-cols-form pt-5'>
 
             <label htmlFor="country" className='text-sm font-medium text-zinc-700'>Country</label>
-            <SelectInput />
+            <SelectInput placeholder='Select a country...'>
+              <Item value='br' text='Brasil'/>
+              <Item value='cn' text='Canadá'/>
+              <Item value='eua' text='EUA'/>
+              <Item value='ch' text='China'/>
+            </SelectInput>
           </div>
 
           <div className='grid gap-3 grid-cols-form pt-5'>
 
             <label htmlFor="timezone" className='text-sm font-medium text-zinc-700'>Timezone</label>
-            <div />
+            <SelectInput placeholder='Select a timezone...'>
+              <Item value='utc' text='Pacific Standart Time (UTC-08:00)'/>
+              <Item value='br' text='South America Time (UTC-03:00)'/>
+            </SelectInput>
+
 
           </div>
 
