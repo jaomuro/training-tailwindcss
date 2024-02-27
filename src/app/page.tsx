@@ -1,7 +1,9 @@
+
 import { SettingsTabs } from '@/components/SetteingsTabs.tsx';
 import * as Input from '../components/Sidebar/Input'
-import { Mail, UploadCloud, User } from 'lucide-react';
+import { Mail} from 'lucide-react';
 import * as FileInput from '../components/FileInput'
+import { SelectInput } from '../components/SelectInput.tsx'
 
 export default function Home() {
   return (
@@ -89,8 +91,7 @@ export default function Home() {
           <div className='grid gap-3 grid-cols-form pt-5'>
 
             <label htmlFor="country" className='text-sm font-medium text-zinc-700'>Country</label>
-            <div />
-
+            <SelectInput />
           </div>
 
           <div className='grid gap-3 grid-cols-form pt-5'>
