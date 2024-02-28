@@ -6,6 +6,7 @@ import * as FileInput from '../components/FileInput'
 import { SelectInput } from '../components/SelectInput.tsx'
 import { Item } from '@/components/SelectInput.tsx/item';
 import { TextArea } from '@/components/TextArea';
+import { Button } from '@/components/Button/Button';
 
 export default function Home() {
   return (
@@ -25,8 +26,8 @@ export default function Home() {
           </div>
 
           <div className='flex items-center gap-2'>
-            <button type='button' className='rounded-lg px-4 py-2 text-sm font-semibold shadow-sm border border-zinc-300 text-zinc-700 hover:bg-zinc-50'>Cancel</button>
-            <button type='submit' form='settings' className='rounded-lg px-4 py-2 text-sm font-semibold shadow-sm bg-violet-600 text-white hover:bg-violet-700'>Save</button>
+            <Button variant='outline' type='button' >Cancel</Button>
+            <Button variant='primary' type='submit' form='settings' >Save</Button>
           </div>
 
         </div>
@@ -129,21 +130,21 @@ export default function Home() {
                 </SelectInput>
 
                 <div className='flex items-center gap-1'>
-                  <button type='button' className="p-2 hover:bg-zinc-50 rounded-md">
-                    <Bold strokeWidth={3} className="size-4 text-zinc-500 "/>
-                  </button>
-                  <button type='button' className="p-2 hover:bg-zinc-50 rounded-md">
-                    <Italic strokeWidth={3} className="size-4 text-zinc-500 "/>
-                  </button>
-                  <button type='button' className="p-2 hover:bg-zinc-50 rounded-md">
-                    <Link strokeWidth={3} className="size-4 text-zinc-500 "/>
-                  </button>
-                  <button type='button' className="p-2 hover:bg-zinc-50 rounded-md">
-                    <List strokeWidth={3} className="size-4 text-zinc-500 "/>
-                  </button>
-                  <button type='button' className="p-2 hover:bg-zinc-50 rounded-md">
+                  <Button type='button' variant='icon'>
+                    <Bold strokeWidth={3} className="size-4 text-zinc-500"/>
+                  </Button>
+                  <Button type='button' variant='icon'>
+                    <Italic strokeWidth={3} className="size-4 text-zinc-500"/>
+                  </Button>
+                  <Button type='button' variant='icon'>
+                    <Link strokeWidth={3} className="size-4 text-zinc-500"/>
+                  </Button>
+                  <Button type='button' variant='icon'>
+                    <List strokeWidth={3} className="size-4 text-zinc-500"/>
+                  </Button>
+                  <Button type='button' variant='icon'>
                     <ListOrdered strokeWidth={3} className="size-4 text-zinc-500 "/>
-                  </button>
+                  </Button>
                 </div>
 
                 
@@ -169,8 +170,8 @@ export default function Home() {
           </div>
 
           <div className='flex items-center justify-end pt-5 gap-2'>
-            <button type='button' className='rounded-lg px-4 py-2 text-sm font-semibold shadow-sm border border-zinc-300 text-zinc-700 hover:bg-zinc-50'>Cancel</button>
-            <button type='submit' form='settings' className='rounded-lg px-4 py-2 text-sm font-semibold shadow-sm bg-violet-600 text-white hover:bg-violet-700'>Save</button>
+            <Button variant='outline' type='button'>Cancel</Button>
+            <Button variant='primary' type='submit' form='settings'>Save</Button>
           </div>
         </form>
       </div>
