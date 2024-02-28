@@ -4,14 +4,14 @@ import {  ChevronDown } from "lucide-react";
 import { Item } from "./item";
 import { ReactNode } from "react";
 
-export interface SelectInputProps{
+export interface SelectInputProps extends Select.SelectProps{
   children: ReactNode
   placeholder: string
 }
 
-export function SelectInput({children, placeholder}: SelectInputProps) {
+export function SelectInput({children, placeholder, ...props}: SelectInputProps) {
   return(
-    <Select.Root>
+    <Select.Root {...props}>
     <Select.Trigger className='flex h-11 w-full items-center justify-between gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm data-[placeholder]:text-zinc-500'>
       <Select.Value className='text-black' placeholder={placeholder}/>
       <Select.Icon>
@@ -19,7 +19,7 @@ export function SelectInput({children, placeholder}: SelectInputProps) {
       </Select.Icon>
     </Select.Trigger>
     <Select.Portal>
-      <Select.Content sideOffset={8} side="bottom" position="popper" className="overflow-hidden z-10 rounded-lg border border-zinc-200 bg-white w-[--radix-select-trigger-width]">
+      <Select.Content sideOffset={8} side="bottom" position="popper" className="overflow-hidden z-10 rounded-lg border border-zinc-200 bg-white w-[--radix-select-trigger-width] shadow-sm">
         <Select.Viewport >
           {children}
         </Select.Viewport>
