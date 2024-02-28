@@ -3,6 +3,9 @@
 import { Trash2, UploadCloud } from "lucide-react"
 import { useFileInput } from "./Root"
 
+import { useAutoAnimate } from '@formkit/auto-animate/react'
+
+
 function convertBytes(bytes: number) {
     const kilobytes = bytes / 1024
     const megabytes = kilobytes /  1024;
@@ -21,9 +24,10 @@ function convertBytes(bytes: number) {
 
 export function FileList() {
     const {files} = useFileInput()
+    const [parent] = useAutoAnimate()
 
     return(
-        <div className="mt-4 space-y-3">
+        <div className="mt-4 space-y-3" ref={parent}>
             {files.map(file =>{
                 return <div key={file.name} className="group flex items-start gap-4 rounded-lg border border-zinc-200 p-4">
                     <div className="rounded-full border-4 border-violet-100 bg-violet-200 p-2 text-violet-600">

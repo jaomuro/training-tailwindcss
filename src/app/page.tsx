@@ -164,7 +164,7 @@ export default function Home() {
             <FileInput.Root className='gap-5'>
               <FileInput.Trigger />
               <FileInput.FileList />
-              <FileInput.Control multiple/>
+              <FileInput.Control multiple={false}/>
             </FileInput.Root>
           </div>
 
