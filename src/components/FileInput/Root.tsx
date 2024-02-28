@@ -2,7 +2,7 @@
 import { File } from "buffer";
 import { ComponentProps, createContext, useContext, useId, useState} from "react";
 
-type RootProps = ComponentProps<'div'>
+type RootProps = ComponentProps<'div'> 
 
 type FileInputContextType = {
     id: string,
