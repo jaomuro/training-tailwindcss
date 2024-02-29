@@ -16,7 +16,7 @@ export default function Home() {
 
       <div className='mt-6  flex flex-col'>
 
-        <div className='flex items-center justify-between border-b border-zinc-200 pb-5'>
+        <div className='flex flex-col gap-4 lg:flex-row lg:items-center justify-between border-b border-zinc-200 pb-5'>
 
           <div className='space-y-1'>
             <h2 className='text-lg font-medium text-zinc-900'>Personal info</h2>
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
 
         <form id='settings' className='mt-6 flex flex-col w-full gap-5 divide-y divide-zinc-200'>
-          <div className='grid gap-3 grid-cols-form'>
+          <div className='flex flex-col lg:grid gap-3 grid-cols-form'>
 
             <label htmlFor="firstName" className='text-sm font-medium text-zinc-700'>Name</label>
 
@@ -48,7 +48,7 @@ export default function Home() {
 
           </div>
 
-          <div className='grid gap-3 grid-cols-form pt-5'>
+          <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
 
             <label htmlFor="email" className='text-sm font-medium text-zinc-700'>Email address</label>
 
@@ -64,13 +64,13 @@ export default function Home() {
 
           </div>
 
-          <div className='grid gap-3 grid-cols-form pt-5'>
+          <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
 
           <label htmlFor="photo" className='text-sm font-medium text-zinc-700'>
             Your photo
             <span className='text-sm mt-0.5 font-normal text-zinc-500 block'>This will be displayed on your profile.</span>
           </label>   
-            <FileInput.Root className='flex items-start gap-5'>
+            <FileInput.Root className='flex flex-col lg:flex-row lg:items-start gap-5'>
               <FileInput.ImagePreview />
               <FileInput.Trigger />
               <FileInput.Control />
@@ -79,7 +79,7 @@ export default function Home() {
 
           </div>
 
-          <div className='grid gap-3 grid-cols-form pt-5'>
+          <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
 
             <label htmlFor="role" className='text-sm font-medium text-zinc-700'>Role</label>
               <Input.Root>
@@ -89,7 +89,7 @@ export default function Home() {
 
           </div>
 
-          <div className='grid gap-3 grid-cols-form pt-5'>
+          <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
 
             <label htmlFor="country" className='text-sm font-medium text-zinc-700'>Country</label>
             <SelectInput placeholder='Select a country...'>
@@ -100,7 +100,7 @@ export default function Home() {
             </SelectInput>
           </div>
 
-          <div className='grid gap-3 grid-cols-form pt-5'>
+          <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
 
             <label htmlFor="timezone" className='text-sm font-medium text-zinc-700'>Timezone</label>
             <SelectInput placeholder='Select a timezone...'>
@@ -111,7 +111,7 @@ export default function Home() {
 
           </div>
 
-          <div className='grid gap-3 grid-cols-form pt-5'>
+          <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
 
             <label htmlFor="bio" className='text-sm font-medium text-zinc-700'>
               Bio
@@ -121,7 +121,7 @@ export default function Home() {
             </label>
             <div className='space-y-3'>
 
-              <div className='grid gap-3 grid-cols-2 '>
+              <div className='flex flex-col lg:grid gap-3 lg:grid-cols-2 '>
                 <SelectInput placeholder='' defaultValue='txt'>
                   <Item value='txt' text='Normal Text'/>
                   <Item value='md' text='Markdown'/>
@@ -153,7 +153,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='grid gap-3 grid-cols-form pt-5'>
+          <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
             <label htmlFor="projects" className='text-sm font-medium text-zinc-700'>
               Portifolio projects
               <span className='text-sm mt-0.5 font-normal text-zinc-500 block'>
