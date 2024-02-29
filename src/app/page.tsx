@@ -14,8 +14,6 @@ export default function Home() {
       <h1 className="font-medium text-zinc-900 text-2xl">Settings</h1>
       <SettingsTabs />
 
-
-
       <div className='mt-6  flex flex-col'>
 
         <div className='flex items-center justify-between border-b border-zinc-200 pb-5'>
