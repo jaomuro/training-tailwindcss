@@ -8,11 +8,11 @@ export function Profile(){
             alt=""
             className="rounded-full size-10" />
             <div className="flex flex-col flex-1 truncate">
-                <span className="text-sm font-semibold">Jhon Cruz</span>
-                <span className=" truncate text-sm text-zinc-500">jhonwcruznoc@gmail.com</span>
+                <span className="text-sm font-semibold dark:text-zinc-100">Jhon Cruz</span>
+                <span className=" truncate text-sm text-zinc-500 dark:text-zinc-400">jhonwcruznoc@gmail.com</span>
             </div>
             <Button type='button' variant="icon">
-                <LogOut className="size-5 text-zinc-500 "/>
+                <LogOut className="size-5 "/>
             </Button>
         </div>
     )
