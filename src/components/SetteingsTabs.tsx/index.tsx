@@ -12,7 +12,7 @@ export function SettingsTabs() {
         <Tabs.Root value={currentTab} onValueChange={SetCurrentTab}>
             <ScrollArea.Root type='scroll' className='w-full'>
                 <ScrollArea.Viewport className='w-full overflow-x-scroll'>
-                    <Tabs.List className='mt-6 flex w-full items-center gap-4 border-b border-zinc-200 '>
+                    <Tabs.List className='mt-6 flex w-full items-center gap-4 border-b border-zinc-200 dark:border-zinc-700 '>
                         <TabItem value='my-value1' title='My details' isSelected={currentTab === 'my-value1'} />
                         <TabItem value='my-value2' title='Profile' isSelected={currentTab === 'my-value2'} />
                         <TabItem value='my-value3' title='Password' isSelected={currentTab === 'my-value3'} />

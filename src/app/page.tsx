@@ -11,16 +11,16 @@ import { Button } from '@/components/Button/Button';
 export default function Home() {
   return (
       <>
-      <h1 className="font-medium text-zinc-900 text-2xl">Settings</h1>
+      <h1 className="font-medium text-zinc-900 text-2xl dark:text-zinc-100">Settings</h1>
       <SettingsTabs />
 
       <div className='mt-6  flex flex-col'>
 
-        <div className='flex flex-col gap-4 lg:flex-row lg:items-center justify-between border-b border-zinc-200 pb-5'>
+        <div className='flex flex-col gap-4 lg:flex-row lg:items-center justify-between border-b border-zinc-200 dark:border-zinc-700 pb-5'>
 
           <div className='space-y-1'>
-            <h2 className='text-lg font-medium text-zinc-900'>Personal info</h2>
-            <p className='text-sm text-zinc-500'>Update your photo and personal details here.</p>
+            <h2 className='text-lg font-medium text-zinc-900 dark:text-zinc-100'>Personal info</h2>
+            <p className='text-sm text-zinc-500 dark:text-zinc-400'>Update your photo and personal details here.</p>
           </div>
 
           <div className='flex items-center gap-2'>
@@ -30,10 +30,10 @@ export default function Home() {
 
         </div>
 
-        <form id='settings' className='mt-6 flex flex-col w-full gap-5 divide-y divide-zinc-200'>
+        <form id='settings' className='mt-6 flex flex-col w-full gap-5 divide-y divide-zinc-200 dark:divide-zinc-700'>
           <div className='flex flex-col lg:grid gap-3 grid-cols-form'>
 
-            <label htmlFor="firstName" className='text-sm font-medium text-zinc-700'>Name</label>
+            <label htmlFor="firstName" className='text-sm font-medium text-zinc-700 dark:text-zinc-300'>Name</label>
 
             <div className='grid gap-6 grid-cols-2'>
               <Input.Root>
@@ -50,7 +50,7 @@ export default function Home() {
 
           <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
 
-            <label htmlFor="email" className='text-sm font-medium text-zinc-700'>Email address</label>
+            <label htmlFor="email" className='text-sm font-medium text-zinc-700 dark:text-zinc-300'>Email address</label>
 
               <Input.Root>
               <Input.Prefix >
@@ -66,9 +66,9 @@ export default function Home() {
 
           <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
 
-          <label htmlFor="photo" className='text-sm font-medium text-zinc-700'>
+          <label htmlFor="photo" className='text-sm font-medium text-zinc-700 dark:text-zinc-300'>
             Your photo
-            <span className='text-sm mt-0.5 font-normal text-zinc-500 block'>This will be displayed on your profile.</span>
+            <span className='text-sm mt-0.5 font-normal text-zinc-500 dark:text-zinc-400 block'>This will be displayed on your profile.</span>
           </label>   
             <FileInput.Root className='flex flex-col lg:flex-row lg:items-start gap-5'>
               <FileInput.ImagePreview />
@@ -81,7 +81,7 @@ export default function Home() {
 
           <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
 
-            <label htmlFor="role" className='text-sm font-medium text-zinc-700'>Role</label>
+            <label htmlFor="role" className='text-sm font-medium text-zinc-700 dark:text-zinc-300'>Role</label>
               <Input.Root>
                 <Input.Control type='text' id='role' defaultValue='Dev'></Input.Control>
               </Input.Root>
@@ -91,7 +91,7 @@ export default function Home() {
 
           <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
 
-            <label htmlFor="country" className='text-sm font-medium text-zinc-700'>Country</label>
+            <label htmlFor="country" className='text-sm font-medium text-zinc-700 dark:text-zinc-300'>Country</label>
             <SelectInput placeholder='Select a country...'>
               <Item value='br' text='Brasil'/>
               <Item value='cn' text='Canadá'/>
@@ -102,7 +102,7 @@ export default function Home() {
 
           <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
 
-            <label htmlFor="timezone" className='text-sm font-medium text-zinc-700'>Timezone</label>
+            <label htmlFor="timezone" className='text-sm font-medium text-zinc-700 dark:text-zinc-300'>Timezone</label>
             <SelectInput placeholder='Select a timezone...'>
               <Item value='utc' text='Pacific Standart Time (UTC-08:00)'/>
               <Item value='br' text='South America Time (UTC-03:00)'/>
@@ -113,9 +113,9 @@ export default function Home() {
 
           <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
 
-            <label htmlFor="bio" className='text-sm font-medium text-zinc-700'>
+            <label htmlFor="bio" className='text-sm font-medium text-zinc-700 dark:text-zinc-300'>
               Bio
-              <span className='text-sm mt-0.5 font-normal text-zinc-500 block'>
+              <span className='text-sm mt-0.5 font-normal text-zinc-500 dark:text-zinc-400 block'>
                 Write a short introduction.
               </span>
             </label>
@@ -154,9 +154,9 @@ export default function Home() {
           </div>
 
           <div className='flex flex-col lg:grid gap-3 grid-cols-form pt-5'>
-            <label htmlFor="projects" className='text-sm font-medium text-zinc-700'>
+            <label htmlFor="projects" className='text-sm font-medium text-zinc-700 dark:text-zinc-300'>
               Portifolio projects
-              <span className='text-sm mt-0.5 font-normal text-zinc-500 block'>
+              <span className='text-sm mt-0.5 font-normal text-zinc-500 dark:text-zinc-400 block'>
                 Share a few snippets of your work.
               </span>
             </label>
